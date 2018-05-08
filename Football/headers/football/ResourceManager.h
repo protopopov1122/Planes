@@ -6,15 +6,16 @@
 
 namespace Football {
 
-  class ResourceManager {
-    public:
-      ResourceManager(std::string);
-      const std::string &getBasePath() const;
-      std::string getFullPath(std::string) const;
-      wxBitmap loadBitmap(std::string) const;
-    private:
-      const std::string basePath;
-  };
+class ResourceManager {
+public:
+  ResourceManager(std::string);
+  const std::string &getBasePath() const;
+  std::string getFullPath(std::string) const;
+  wxBitmap loadBitmap(std::string) const;
+
+private:
+  const std::string basePath;
+};
 }
 
 #endif
